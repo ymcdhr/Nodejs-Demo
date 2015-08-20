@@ -116,7 +116,6 @@ function conMysql() {
     conn.end();
 }
 
-
 function createTable(conn){
     //要创建的数据库名
     TEST_DATABASE = 'account',
