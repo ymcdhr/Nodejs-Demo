@@ -1,0 +1,112 @@
+﻿-- MySQL Workbench Synchronization
+-- Generated: 2015-08-21 11:02
+-- Model: New Model
+-- Version: 1.0
+-- Project: Name of the project
+-- Author: cckk
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+CREATE SCHEMA IF NOT EXISTS `account` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+
+CREATE TABLE IF NOT EXISTS `account`.`bigclass` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL DEFAULT NULL,
+  `shopId` INT(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `idbigClass_UNIQUE` (`id` ASC))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
+
+CREATE TABLE IF NOT EXISTS `account`.`privilege` (
+  `id` INT(11) NOT NULL,
+  `userId` INT(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
+
+CREATE TABLE IF NOT EXISTS `account`.`products` (
+  `id` INT(11) NOT NULL,
+  `name` VARCHAR(45) NULL DEFAULT NULL,
+  `smallId` INT(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
+
+CREATE TABLE IF NOT EXISTS `account`.`profit` (
+  `id` INT(11) NOT NULL,
+  `productId` INT(11) NOT NULL,
+  `date` VARCHAR(45) NULL DEFAULT NULL,
+  `profit` FLOAT(11) NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
+
+CREATE TABLE IF NOT EXISTS `account`.`purchase` (
+  `id` INT(11) NOT NULL,
+  `productId` INT(11) NOT NULL,
+  `number` INT(11) NULL DEFAULT '0',
+  `price` VARCHAR(45) NULL DEFAULT NULL,
+  `version` VARCHAR(45) NULL DEFAULT NULL,
+  `date` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
+
+CREATE TABLE IF NOT EXISTS `account`.`shop` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL DEFAULT NULL,
+  UNIQUE INDEX `idshop_UNIQUE` (`id` ASC))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
+
+CREATE TABLE IF NOT EXISTS `account`.`smallclass` (
+  `id` INT(11) NOT NULL,
+  `name` VARCHAR(45) NULL DEFAULT NULL,
+  `bigId` INT(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `idsmallClass_UNIQUE` (`id` ASC))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
+
+CREATE TABLE IF NOT EXISTS `account`.`stock` (
+  `id` INT(11) NOT NULL,
+  `productId` INT(11) NOT NULL,
+  `version` VARCHAR(45) NULL DEFAULT NULL,
+  `number` INT(11) NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `idstock_UNIQUE` (`id` ASC))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
+
+CREATE TABLE IF NOT EXISTS `account`.`users` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `userId` VARCHAR(45) NOT NULL,
+  `name` VARCHAR(45) NULL DEFAULT NULL,
+  `isManager` INT(11) NULL DEFAULT '0',
+  `privilegeId` INT(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`userId`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC),
+  UNIQUE INDEX `userStr_UNIQUE` (`userId` ASC))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

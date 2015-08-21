@@ -10,6 +10,9 @@ var path = require('path');
 var data = require('./js/data.js');
 var time = require('./js/timeFuncs.js');
 var comFunc = require('./js/commonFuncs.js');
+var configFunc = require('./js/configFuncs.js');
+var CommonData = require('./js/CommonData.js');
+
 //数据库模块
 var mysql = require('mysql');
 //读写文件模块
@@ -112,6 +115,10 @@ function conMysql() {
     });
 
     //createTable(conn);
+    
+
+    //数据库操作函数
+    configFunc.dbFuncs(conn);
 
     conn.end();
 }
@@ -121,10 +128,20 @@ function createTable(conn){
     TEST_DATABASE = 'account',
 
     //要创建的表名
-    TEST_TABLE = 'test1';
+    TEST_TABLE = 'sales';
     
-    var createTableStr = 'create table ' + TEST_TABLE +'(id integer auto_increment, title varchar(255), primary key (id))';
-    
+    var createTableStr = "CREATE TABLE `sales` (" 
+      + "`id` INT NOT NULL," 
+      + "`productId` INT NOT NULL, " 
+      + "`version` VARCHAR(45) NOT NULL, " 
+      + "`number` INT NOT NULL, " 
+      + "UNIQUE INDEX `id_UNIQUE` (`id` ASC), " 
+      + "PRIMARY KEY (`id`));";
+
     conn.query('USE ' + TEST_DATABASE);
-    conn.query(createTableStr);
+
+    conn.query(createTableStr, function (err, rows, fields) {
+        if (err) throw err;
+        
+    });
 }

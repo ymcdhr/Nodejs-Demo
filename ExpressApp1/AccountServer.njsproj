@@ -32,7 +32,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="js\CommonData.js" />
     <Compile Include="js\commonFuncs.js" />
+    <Compile Include="js\configFuncs.js" />
     <Compile Include="js\data.js" />
     <Compile Include="js\timeFuncs.js" />
     <Compile Include="node_modules\body-parser\index.js" />
@@ -2877,6 +2879,7 @@
     <Content Include="public\stylesheets\style.styl" />
     <Content Include="README.md" />
     <Content Include="temp\AccountModel.mwb" />
+    <Content Include="temp\AddTables.sql" />
     <Content Include="views\contact.jade" />
     <Content Include="views\about.jade" />
     <Content Include="views\index.jade" />

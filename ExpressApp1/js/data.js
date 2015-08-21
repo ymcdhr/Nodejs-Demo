@@ -1,5 +1,6 @@
 ﻿var timeData= require('./timeFuncs.js');
 
+
 var saleData = [
     {
     time: 1433124608,

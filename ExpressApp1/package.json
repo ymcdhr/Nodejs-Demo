@@ -8,8 +8,10 @@
     "email": ""
   },
   "dependencies": {
+    "0": "0.0.0",
     "express": "3.4.4",
     "jade": "*",
+    "mysql": "^2.9.0",
     "stylus": "*"
   }
 }
