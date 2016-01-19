@@ -1,0 +1,42 @@
+body{
+    color: #ffffff;
+    font-family: "Microsoft YaHei UI", "Segoe UI Symbol";
+    background-color: #e6e6e6;
+}
+.index-nav{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.navbar-default .navbar-brand{
+    color: #ffffff;
+}
+.navbar-default .navbar-brand:hover{
+    color: #e6e6e6;
+}
+.navbar-default{
+    background-color: #009966;
+    background-image: none;
+}
+.navbar-default .navbar-nav>li>a{
+    color: #e6e6e6;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color: #ffffff;
+    background-color:#00a876;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+    background-color: #00a876;
+    background-image: none;
+    color: #ffffff;
+}
+.navbar-default .navbar-toggle .icon-bar{
+    background-color: #ffffff;
+}
+
+
+/*嵌入页面*/
+#iframe_index{
+    /*border: 1px solid coral;*/
+    box-sizing: border-box;
+}

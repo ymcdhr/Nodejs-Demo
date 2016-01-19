@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="../../js/jquery-2.1.3.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="../../js/bootstrap.js"></script>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="../../css/bootstrap-theme.css">
+
+    <link href="sale.css" type="text/css" rel="stylesheet">
+    <script src="sale.js"></script>
+    <script src="../../js/timeFuncs.js"></script>
+
+</head>
+<body style="background-color: transparent;">
+<div class="container">
+    <ul class="nav nav-tabs sale-nav">
+        <li role="presentation" class="active"><a id="today-sales" href="#">今日销售</a></li>
+        <li role="presentation"><a id="mounth-sales" href="#">本月销售</a></li>
+        <li role="presentation"><a id="year-sales" href="#">本年销售</a></li>
+        <li role="presentation"><a id="add-sales" href="#">添加销售</a></li>
+    </ul>
+    <section class="sale-section table-responsive">
+        <table id="sale-table" class="table table-hover table-striped sale-table">
+            <tr class="active">
+                <th>日期</th>
+                <th>序号</th>
+                <th>名称</th>
+                <th>大类</th>
+                <th>小类</th>
+                <th>价格</th>
+                <th>数量</th>
+                <th>总价</th>
+                <th>备注</th>
+            </tr>
+            <!--<tr class="success"><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td></tr>-->
+            <!--<tr class="warning"><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td></tr>-->
+            <!--<tr class="danger"><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td></tr>-->
+            <!--<tr class="info"><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td><td>xxx</td></tr>-->
+        </table>
+    </section>
+</div>
+</body>
+</html>

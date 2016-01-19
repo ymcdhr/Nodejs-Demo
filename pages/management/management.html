@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="../../js/bootstrap.js"></script>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="../../css/bootstrap-theme.css">
+
+    <link href="management.css" type="text/css" rel="stylesheet">
+    <script src="/Accounting/js/commonFuncs.js"></script>
+
+    <script src="management.js"></script>
+
+</head>
+<body>
+<div id="manage-content" class="container">
+    <!--<header class="alert alert-success header-text" role="alert">管理员：</header>-->
+    <div class="container-fluid">
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h3 class="panel-title">管理员：</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-addon" id="sizing-addon1">一级类别</span>
+                            <input type="text" id="class1" class="form-control" placeholder="请输入一级类别名称" aria-describedby="sizing-addon1">
+                            <span class="input-group-btn">
+                                <button id="class1-button" class="btn btn-default" type="button">添加</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-addon" id="sizing-addon2">二级类别</span>
+                            <input type="text" id="class2" class="form-control" placeholder="请输入二级类别名称" aria-describedby="sizing-addon1">
+                            <span class="input-group-btn">
+                                <button id="class2-button" class="btn btn-default" type="button">添加</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-addon" id="sizing-addon3">产品名称</span>
+                            <input type="text" id="product-name" class="form-control" placeholder="请输入产品名称" aria-describedby="sizing-addon1">
+                            <span class="input-group-btn">
+                                <button id="name-button" class="btn btn-default" type="button">添加</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-addon" id="sizing-addon4">进货公司</span>
+                            <input type="text" id="product-company" class="form-control" placeholder="请输入进货公司" aria-describedby="sizing-addon1">
+                            <span class="input-group-btn">
+                                <button id="company-button" class="btn btn-default" type="button">添加</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+
+                <!--<div class="row">-->
+                    <!--<div class="col-sm-12" style="text-align: center">-->
+                        <!--<button type="button" id="submit-button" class="btn btn-danger" style="width: 80px">提交</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
